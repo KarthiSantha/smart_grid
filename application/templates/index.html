@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+  {% block content %}
+     <h1>Hello, {{ current_user.username }} !</h1>
+     <a href ="{{ url_for("load") }}">Update Load</a>
+     {%  for post in posts  %}
+     <div><b>{{ post.author.username }}</b> <p> has posted {{ post.body }} </p></div>
+     <br />
+     {% endfor %}
+  {% endblock %}
+
